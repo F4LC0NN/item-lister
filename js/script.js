@@ -34,4 +34,8 @@ function addRemoveItems(event) {
   item.className = "list-item";
   item.textContent = input.value;
   list.appendChild(item);
+
+  // Create an event to remove an item from the list
+  // Animate the button when the events fire
+  deleteButton.addEventListener('click', removeItem);
 }
