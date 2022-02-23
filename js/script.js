@@ -68,3 +68,23 @@ const searchBar = document.querySelector('#search-bar');
 
 // Create an event listener to trigger the fitering event
 searchBar.addEventListener('keyup', filterItems);
+
+// Create a function to filter the li elements based on their text content
+function filterItems(event) {
+
+  // Convert to lowercase
+  const text = event.target.value.toLowerCase();
+
+  // Convert to array
+  const items = list.getElementsByTagName('li');
+
+  // Loop in the array and catch only the first elements
+  Array.from(items).forEach(function(item) {
+    let itemName = item.firstChild.textContent;
+    if (itemName.toLowerCase().indexOf(text) !== -1) {
+      item.style.display = 'flex';
+    } else {
+      item.style.display = 'none';
+    }
+  }); 
+}
