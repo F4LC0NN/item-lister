@@ -35,6 +35,11 @@ function addRemoveItems(event) {
   item.textContent = input.value;
   list.appendChild(item);
 
+  // Create a delete button
+  const deleteButton = document.createElement('button');
+  deleteButton.className = 'delete-button'; 
+  item.appendChild(deleteButton);
+  
   // Create an event to remove an item from the list
   // Animate the button when the events fire
   deleteButton.addEventListener('click', removeItem);
