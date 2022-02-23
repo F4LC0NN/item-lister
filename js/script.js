@@ -57,3 +57,14 @@ function addRemoveItems(event) {
     }
   }
 }
+
+/*
+------------------------------------------------
+FILTER ITEMS
+------------------------------------------------
+*/
+// Select the search input element
+const searchBar = document.querySelector('#search-bar');
+
+// Create an event listener to trigger the fitering event
+searchBar.addEventListener('keyup', filterItems);
