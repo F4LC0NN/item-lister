@@ -39,8 +39,14 @@ function addRemoveItems(event) {
   const deleteButton = document.createElement('button');
   deleteButton.className = 'delete-button'; 
   item.appendChild(deleteButton);
-  
+
   // Create an event to remove an item from the list
   // Animate the button when the events fire
   deleteButton.addEventListener('click', removeItem);
+
+  // Create an icon for the delete button
+  const deleteButtonIcon = document.createElement('span');
+  deleteButtonIcon.classList = 'material-icons delete-icon';
+  deleteButtonIcon.textContent = 'delete_outline';
+  deleteButton.appendChild(deleteButtonIcon);
 }
