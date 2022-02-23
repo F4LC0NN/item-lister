@@ -99,3 +99,10 @@ SORT ITEMS ALPHANUMERICALLY
 function alphaSort(a, b) {
   return a.textContent.localeCompare(b.textContent, undefined, {numeric: true});
 }
+
+// Create a function to sort the list items alphabetically
+function sortList() {
+  Array.from(list.getElementsByTagName('LI'))
+  .sort(alphaSort)
+  .forEach(li => list.appendChild(li));
+}
