@@ -88,3 +88,14 @@ function filterItems(event) {
     }
   }); 
 }
+
+/*
+------------------------------------------------------------------------------------
+SORT ITEMS ALPHANUMERICALLY
+------------------------------------------------------------------------------------
+*/
+
+// Create a function to sort alphabetically
+function alphaSort(a, b) {
+  return a.textContent.localeCompare(b.textContent, undefined, {numeric: true});
+}
