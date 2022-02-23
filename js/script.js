@@ -56,6 +56,9 @@ function addRemoveItems(event) {
       list.removeChild(item);
     }
   }
+
+  // Call the sorting function
+  sortList();
 }
 
 /*
