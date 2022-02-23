@@ -109,3 +109,19 @@ function sortList() {
   .sort(alphaSort)
   .forEach(li => list.appendChild(li));
 }
+
+/*
+------------------------------------------------------------------------------------
+ANIMATIONS
+------------------------------------------------------------------------------------
+*/
+
+// Scale down the submit button
+function scaleDownButton() {
+  submitButton.style.transform = 'scale(0.98)';
+}
+
+// Scale up the submit button
+function scaleUpButton() {
+  submitButton.style.transform = 'scale(1)';
+}
