@@ -49,4 +49,11 @@ function addRemoveItems(event) {
   deleteButtonIcon.classList = 'material-icons delete-icon';
   deleteButtonIcon.textContent = 'delete_outline';
   deleteButton.appendChild(deleteButtonIcon);
+
+  // Create a function to trigger the delete button and remove an item from the list
+  function removeItem(event) {
+    if (event.target.classList.contains('delete-button') || event.target.classList.contains('delete-icon')) {
+      list.removeChild(item);
+    }
+  }
 }
