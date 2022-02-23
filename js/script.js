@@ -15,7 +15,13 @@ CREATE ITEMS
 */
 
 // Create an event to add item to list by clicking on the submit button
-submitButton.addEventListener('click', addRemoveItems);
+// Animate the button when the events fire 
+submitButton.addEventListener('mousedown', (event) => {
+  addRemoveItems(event);
+  scaleDownButton();
+});
+
+submitButton.addEventListener('mouseup', scaleUpButton);
 
 // Create a function to add items
 function addRemoveItems(event) {
